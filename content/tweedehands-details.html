@@ -60,6 +60,7 @@
 <a id="showHere"></a>	
 <div class="container-fluid">
     <!--plugin detailfiche-->
+    
     <div id="car_inject"></div>
     <!--MODALS-->
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -118,6 +119,9 @@
 		}
 	};
 	var banner = new Headhesive('.menu-top', options);
+	$('.navbar-toggler').on('click', function () {
+    $('.collapse').collapse('toggle');
+});
 </script>
 
 </body>
