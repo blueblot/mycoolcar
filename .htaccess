@@ -1,0 +1,13 @@
+ErrorDocument 404 '/404.php'
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+### RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteCond %{THE_REQUEST} ^.*/index\.html 
+RewriteRule ^(.*)index.html$ /$1 [R=301,L] 
+
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
