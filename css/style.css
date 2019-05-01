@@ -1,0 +1,39 @@
+.jumbo{
+	background-image: url("../graphics/header.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	margin-bottom: 0
+}
+
+/*fixed menu*/
+.banner--clone {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: #c95a5d;
+	transform: translateY(-100%);
+	transition: all 300ms ease-in-out;
+	width: 100%;
+}
+.banner--stick {
+	transform: translateY(0%);
+}
+
+@media only screen and (min-width : 576px){	
+}
+
+@media only screen and (min-width : 768px){	
+}
+
+@media only screen and (min-width : 992px){	
+}
+ 
+@media only screen and (min-width : 1200px){
+}
+
+@media screen and (min-width: 1900px) {
+	
+}
+

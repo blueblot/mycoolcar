@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/fontawesome-all.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/cfm_api_extra.css" />
+    <link type="text/css" rel="stylesheet" href="../css/lightslider.css" />
+	<link type="text/css" rel="stylesheet" href="../css/lightgallery.css" />
+<title>My cool car</title>
+</head>
+	
+<body>
+	
+<div class="menu-top">	
+	<nav class="navbar navbar-expand-sm navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="tweedehands.html">tweedehands</a>
+			</li>
+            <li class="nav-item">
+				<a class="nav-link" href="#">nieuw</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">BEST DEALS</a>
+			</li>
+            <li class="nav-item">
+				<a class="nav-link" href="#">info</a>
+			</li>
+            <li class="nav-item">
+				<a class="nav-link" href="#">contact</a>
+			</li>
+		</ul>
+	</div>
+	</nav>
+</div>
+
+<div class="jumbotron jumbotron-fluid jumbo">
+	<div class="container">
+		<h1 class="display-4">My Cool Car</h1>
+		<p class="lead">Ervaar hoe je simpel en eenvoudig een auto koopt of verkoopt op mycoolcar.be</p>
+	</div>
+</div>
+	
+<a id="showHere"></a>	
+<div class="container">
+    <!--plugin detailfiche-->
+    <div id="car_inject"></div>
+    <!--MODALS-->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Nieuw bericht</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!--plugin formulier-->
+					<div id="form_inject"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+					<button type="button" class="btn btn-primary">Verzenden</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../js/headhesive.js"></script>
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/Utils.min.js"></script>
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/plugin.ui.min.js"></script>
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/CarDetails.min.js"></script>
+<script type="text/javascript" src="https://cfmapistorp01.blob.core.windows.net/resources/Scripts/Forms.min.js"></script>
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyCwEGA9ZZ5hFpgs473qUvpTw03Qty0Aj84&language=nl"></script>
+<script type="text/javascript" src="../js/scripts.js"></script>
+<script type="text/javascript" src="../js/lightslider.js"></script>
+<script type="text/javascript" src="../js/lightgallery.js"></script>
+<script type="text/javascript" src="../js/cfm_api_extra.js"></script>
+<script type="text/javascript">
+		var config = {
+			Environment: CFM.Environment.PROD,
+			Culture: "nl-BE",
+			SpinnerColor: CFM.SpinnerColor.BLACK  //GRAY and BLACK are also available
+		};
+		CFM.API.init(config);
+		CFM.API.enable("1fe2b61e-8da1-4a39-bf35-ea1cff7803b0", "#car_inject");
+		CFM.API.enable("c0dacf5e-d26e-4b77-b083-179434568f40", "#form_inject");
+	</script>
+<script>
+	var options = {
+		offset: '#showHere',
+		offsetSide: 'top',
+		classes: {
+			clone:   'banner--clone',
+			stick:   'banner--stick',
+		}
+	};
+	var banner = new Headhesive('.menu-top', options);
+</script>
+
+</body>
+</html>

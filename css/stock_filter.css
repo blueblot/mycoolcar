@@ -1,0 +1,79 @@
+﻿.carc-card__media {
+	flex-basis: 1 !important;
+	overflow: hidden;
+}
+
+.vehicleDataPagerCtn .label {
+	display: none;
+}
+
+.vehicleDataPagerCtn a {
+	cursor: pointer;
+}
+
+.firstPage, .lastPage, .previousPage, .nextPage {
+	font-size: 0;
+}
+
+	.firstPage:before {
+		font-family: "Material Icons";
+		content: "first_page";
+		font-size: 16px;
+	}
+
+	.lastPage:before {
+		font-family: "Material Icons";
+		content: "last_page";
+		font-size: 16px;
+	}
+
+	.previousPage:before {
+		font-family: "Material Icons";
+		content: "chevron_left";
+		font-size: 16px;
+	}
+
+	.nextPage:before {
+		font-family: "Material Icons";
+		content: "chevron_right";
+		font-size: 16px;
+	}
+
+.vehicleDataPagerCtn > * {
+	padding: 10px 15px;
+	background: #fff;
+	color: #4d61c4;
+	border-right: 1px solid rgba(196, 196, 196, 0.5);
+	flex-grow: 1;
+}
+
+.plugin_pager {
+	width: 100%;
+}
+
+.vehicleDataPagerCtn {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+	padding: 0 10px;
+	text-align: center;
+}
+
+.plugin_pager:nth-of-type(even) {
+	margin-bottom: 20px;
+}
+
+.vehicleDataPagerCtn > a:hover {
+	text-decoration: none;
+	color: #4d61c4;
+}
+
+.vehicleDataPagerCtn > a[disabled="disabled"], .pagerCurrent {
+	cursor: not-allowed;
+	color: #C5C5C5;
+}
+
+a.pagerNumeric.lastPage {
+	border-right: 0;
+}
