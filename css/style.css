@@ -1,3 +1,8 @@
+/*****logo*****/
+.logo{
+	padding:20px 0;
+}
+/*****headerfoto*****/
 .jumbo{
 	background-image: url("../graphics/header.jpg");
 	background-repeat: no-repeat;
@@ -6,7 +11,7 @@
 	margin-bottom: 0
 }
 
-/*fixed menu*/
+/*****fixed menu*****/
 .banner--clone {
 	position: fixed;
 	z-index: 1;
