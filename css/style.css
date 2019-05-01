@@ -1,3 +1,7 @@
+/*****alg opmaak*****/
+li{
+	list-style:none;
+}
 /*****logo*****/
 .logo{
 	padding:20px 0;
@@ -9,6 +13,9 @@
 	background-size: cover;
 	color: #fff;
 	margin-bottom: 0
+}
+.facetten, .oplijsting-cars{
+	float:left;
 }
 
 /*****fixed menu*****/

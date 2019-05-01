@@ -12,7 +12,7 @@
 </head>
 	
 <body>
-<div class="container logo">
+<div class="container-fluid logo">
     <div class="col-xs-12 col-sm-6">
         <img src="../graphics/logo.png" class="img-fluid" />
     </div>	
@@ -54,15 +54,21 @@
 		<h1 class="display-4">My Cool Car</h1>
 		<p class="lead">Ervaar hoe je simpel en eenvoudig een auto koopt of verkoopt op mycoolcar.be</p>
         <a id="showHere"></a>	
-         <!--plugin zoeken-->
-        <div id="search_inject"></div>
+         <!--plugin zoeken
+        <div id="search_inject"></div>-->
 	</div>
 </div>
-	
 
-<div class="container">
-    <!--plugin oplijsting wagens-->
-    <div id="car_inject"></div>
+<div class="container-fluid">
+    <div class="col-xs-12 col-sm-6 col-md-3 facetten">
+        <!--plugin facetten zoeken-->
+        <div id="facetten"></div>	
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-9 oplijsting-cars">
+        <!--plugin oplijsting wagens-->
+        <div id="car_inject"></div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -84,6 +90,7 @@ var config = {
 	CFM.API.init(config);
 	CFM.API.enable("448b6338-8c17-43fd-befd-faae64337e02", "#search_inject");
 	CFM.API.enable("724a8c83-663d-4cec-a49d-29d633a0c41d", "#car_inject");
+	CFM.API.enable("383afcc6-f9c3-47cb-a997-e3b21272cec2", "#facetten");
 </script>
 <script>
 	var options = {
